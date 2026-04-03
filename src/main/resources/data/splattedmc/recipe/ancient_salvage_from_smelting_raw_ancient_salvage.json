@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "ancient_salvage",
+  "ingredient": {
+    "item": "splattedmc:raw_ancient_salvage"
+  },
+  "result": {
+    "id": "splattedmc:ancient_salvage"
+  }
+}

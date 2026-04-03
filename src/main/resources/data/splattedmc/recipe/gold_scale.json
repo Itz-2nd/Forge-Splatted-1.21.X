@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "splattedmc:gold_scale_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "splattedmc:gold_scale"
+  }
+
+}

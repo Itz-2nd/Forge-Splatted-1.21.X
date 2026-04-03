@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "group": "ancient_salvage",
+  "ingredient": {
+    "item": "splattedmc:ancient_salvage_ore"
+  },
+  "result": {
+    "id": "splattedmc:ancient_salvage"
+  }
+}

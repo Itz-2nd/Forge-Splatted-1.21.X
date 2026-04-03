@@ -1,4 +1,4 @@
-package net.itzsecond.splatted;
+package net.itzsecond.splattedmc;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;

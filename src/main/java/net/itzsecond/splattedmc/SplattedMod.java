@@ -1,6 +1,11 @@
-package net.itzsecond.splatted;
+package net.itzsecond.splattedmc
+;
 
 import com.mojang.logging.LogUtils;
+import net.itzsecond.splattedmc.block.ModBlocks;
+import net.itzsecond.splattedmc.item.ModCreativeModeTabs;
+import net.itzsecond.splattedmc.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -34,6 +39,11 @@ public class SplattedMod
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus); // setting custom tab for the mod
+
+        ModItems.register(modEventBus); // registering Mod Items
+        ModBlocks.register((modEventBus)); // registering Mod Blocks
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -49,7 +59,21 @@ public class SplattedMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.GOLD_SCALE);
+            event.accept(ModItems.SILVER_SCALE);
+            event.accept(ModItems.ANCIENT_SALVAGE);
+            event.accept(ModItems.RAW_ANCIENT_SALVAGE);
+        }
 
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.SQUID_CRATE);
+            event.accept(ModBlocks.GOLD_SCALE_BLOCK);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.ANCIENT_SALVAGE_ORE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

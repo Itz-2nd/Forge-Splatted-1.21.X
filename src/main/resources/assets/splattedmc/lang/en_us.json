@@ -1,0 +1,14 @@
+{
+  "item.splattedmc.gold_scale": "Gold Scale",
+  "item.splattedmc.silver_scale": "Silver Scale",
+  "item.splattedmc.ancient_salvage": "Ancient Salvage",
+  "item.splattedmc.raw_ancient_salvage": "Raw Ancient Salvage",
+
+  "block.splattedmc.squid_crate": "Squid Crate",
+  "block.splattedmc.gold_scale_block": "Block of Gold Scale",
+  "block.splattedmc.ancient_salvage_ore": "Ancient Salvage Ore",
+
+
+  "creativetab.splattedmc.splatted_tab": "Splatted!",
+  "creativetab.splattedmc.splatted_weapons_tab": "Splatted Weapons"
+}
