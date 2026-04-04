@@ -31,12 +31,12 @@ public class ModCreativeModeTabs {
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> SPLATTED_WEAPONS_TAB = CREATIVE_MODE_TABS.register("splatted_weapons_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.GOLD_SCALE_BLOCK.get())) // placeholder Icon
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SPLATTERSHOT_JR.get())) // placeholder Icon
                     .withTabsBefore(SPLATTED_TAB.getId()) // Sets the Base Splatted tab to come before weapons tab
                     .title(Component.translatable("creativetab.splattedmc.splatted_weapons_tab"))
                     .displayItems((itemDisplayPerameters, output) -> {
                         //Adding Items to Tab
-                        output.accept(ModBlocks.GOLD_SCALE_BLOCK.get()); // this is a placeholder for now, untill weapons are added
+                        output.accept(ModItems.SPLATTERSHOT_JR.get());
                     }).build());
 
     public static void register(IEventBus eventBus) {
