@@ -5,6 +5,7 @@ import com.mojang.logging.LogUtils;
 import net.itzsecond.splattedmc.block.ModBlocks;
 import net.itzsecond.splattedmc.item.ModCreativeModeTabs;
 import net.itzsecond.splattedmc.item.ModItems;
+import net.itzsecond.splattedmc.item.entity.ModEntities;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -42,7 +43,8 @@ public class SplattedMod
         ModCreativeModeTabs.register(modEventBus); // setting custom tab for the mod
 
         ModItems.register(modEventBus); // registering Mod Items
-        ModBlocks.register((modEventBus)); // registering Mod Blocks
+        ModBlocks.register(modEventBus); // registering Mod Blocks
+        ModEntities.ENTITIES.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

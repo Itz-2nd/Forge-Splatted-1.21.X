@@ -2,6 +2,7 @@ package net.itzsecond.splattedmc.item;
 
 import net.itzsecond.splattedmc.SplattedMod;
 import net.itzsecond.splattedmc.item.weapon.ModShooterClass;
+import net.itzsecond.splattedmc.item.weapon.shooter.SplatterShotJr;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -25,7 +26,7 @@ public class ModItems {
     //Weapons
     //Shooter Class Weapons
     public static final RegistryObject<Item> SPLATTERSHOT_JR = ITEMS.register("splattershot_jr",
-            () -> new ModShooterClass(new Item.Properties().stacksTo(1)));
+            () -> new SplatterShotJr(new Item.Properties().stacksTo(1)));
 
 
     public static void register(IEventBus eventBus) {
